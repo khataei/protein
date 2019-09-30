@@ -38,3 +38,9 @@ total_df <- initial_df %>%  select(1:10) %>% cbind(.,working_df)
 # Sequence data and Kcat/Km
 case_one_df <- total_df %>%  select(-c(1:9)) %>%  na.omit()
 fwrite(case_one_df, "Case-one.csv")
+
+
+# Case Two
+# Sequence and Kcat
+case_two_df <- total_df %>%  select(c(Kcat,11:ncol(.))) %>%  na.omit()
+fwrite(case_two_df, "Case-two.csv")
