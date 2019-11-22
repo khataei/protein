@@ -1,0 +1,13 @@
+1- Use split to do 0.7 to .30 and then try the svm method from : filter <- ksvm(Kcat_Km ~ ., data=working_df, kernel="rbfdot",
+               kpar=list(sigma=0.05),C=5,cross=3)
+line 71 of REg-model.R file
+
+
+2- Cluster the working_df$Kcat before categorization and see how many clusters we have
+
+
+
+3- Round working_df$Kcat and re categorize with fewer classes instead of 12
+
+
+4- Find the distance table and calculate the distances
